@@ -1,5 +1,11 @@
-function App() {
-  return <div className="todo-app">Todo</div>;
-}
+import TodoContainer from "./components/TodoList/TodoContainer";
 
-export default App;
+const TodoApp = () => {
+  return (
+    <div className="todo-app">
+      <TodoContainer />
+    </div>
+  );
+};
+
+export default TodoApp;

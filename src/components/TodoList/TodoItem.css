@@ -1,0 +1,16 @@
+.todo-item {
+  display: flex;
+  background-color: #ebebeb;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  padding: 8px;
+}
+.todo-item:hover {
+  background-color: #c4c4c4;
+}
+.todo-item-checkbox {
+  padding: 16px;
+}
+.todo-item-title {
+  width: 100%;
+}
