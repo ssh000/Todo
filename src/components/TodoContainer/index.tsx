@@ -1,5 +1,6 @@
 import { useState } from "react";
-import TodoList from "./TodoList";
+import TodoList from "../TodoList";
+import NewItemField from "../NewItemField";
 
 const initialItems = [
   {
@@ -36,7 +37,16 @@ const TodoListContainer = () => {
     );
   };
 
-  return <TodoList items={items} onItemChange={onItemChange} />;
+  const onAddItem = (newItem: Item) => {
+    setItems([newItem, ...items]);
+  };
+
+  return (
+    <>
+      <NewItemField onAddItem={onAddItem} />
+      <TodoList items={items} onItemChange={onItemChange} />
+    </>
+  );
 };
 
 export default TodoListContainer;

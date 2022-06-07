@@ -1,6 +1,6 @@
 import { ChangeEvent, memo } from "react";
-import { Item, onItemChange } from "./TodoContainer";
-import "./TodoItem.css";
+import { Item, onItemChange } from "../TodoContainer";
+import "./index.css";
 
 type Props = Item & { onChange: onItemChange };
 
@@ -15,11 +15,17 @@ const TodoItem = memo(
     };
 
     return (
-      <div className="todo-item">
+      <div className="todo-item" data-testid="todo-item">
         <label className="todo-item-checkbox">
-          <input type="checkbox" checked={done} onChange={onDoneChange} />
+          <input
+            data-testid="todo-item-checkbox"
+            type="checkbox"
+            checked={done}
+            onChange={onDoneChange}
+          />
         </label>
         <input
+          data-testid="todo-item-input"
           className="todo-item-title"
           type="input"
           value={title}

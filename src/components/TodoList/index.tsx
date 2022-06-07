@@ -1,5 +1,5 @@
-import TodoItem from "./TodoItem";
-import { Item, onItemChange } from "./TodoContainer";
+import TodoItem from "../TodoItem";
+import { Item, onItemChange } from "../TodoContainer";
 
 interface Props {
   items: Item[];
